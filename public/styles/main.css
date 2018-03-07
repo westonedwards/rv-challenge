@@ -1,0 +1,13 @@
+main {
+  background: #ffffff url('../images/water-image.png') no-repeat top center;
+  padding: 150px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.filter {
+  background: #f6f6f6;
+  padding: 25px 0px 25px 0px;
+  border-radius: 5px;
+  width: 90%;
+}
