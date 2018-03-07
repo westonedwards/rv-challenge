@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+body {
+  font-family: 'OpenSans', sans-serif;
+}
+footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.social-connect {
+  background: #083d8c;
+  color: #FFFFFF;
+}
+.copyright-terms {
+  background: #216ddf;
+  color: #FFFFFF;
+}
+.copyright-terms div {
+  display: inline;
+  padding: 15px 15px 15px 15px;
+}

@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+body {
+  font-family: 'OpenSans', sans-serif;
+}
+.blue-header {
+  background: #083d8c;
+  color: #FFFFFF;
+  padding: 15px 0px 15px 0px;
+}
+.blue-header div {
+  display: inline;
+}
