@@ -1,0 +1,23 @@
+{
+  "name": "cardinal-challenge",
+  "version": "1.0.0",
+  "description": "Coding challenge for Cardinal Solutions",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-less": "^3.4.0",
+    "gulp-watch": "^5.0.0",
+    "jshint": "^2.9.5",
+    "less": "^2.7.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Weston Edwards",
+  "license": "ISC"
+}
