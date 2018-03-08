@@ -1,23 +1,54 @@
 @import './default.less';
 
 .blue-header {
+    .container;
     background: @dark-blue;
     color: #FFFFFF;
-    padding: 15px 0px 15px 0px;
-    div {
-        display: inline;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    .commercial-service {
+        margin-left: 25px;
+        display: flex;
+        flex-direction: row;
+        div {
+            img {
+                max-width: 15px;
+                height: auto;
+                margin-left: 10px;
+            }
+        }
     }
 }
 
 nav {
+    .container;
     position: relative;
     z-index: 1;
     -webkit-box-shadow: 0 8px 4px 0px #666666;
     -moz-box-shadow: 0 4px 8px 0px #666666;
     box-shadow: 0 4px 8px 0px #666666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
     ul {
         li {
             display: inline;
+            padding-left: 50px;
+            font-weight: bold;
+            color: @dark-blue;
+            a {
+                padding: 10px;
+            }
+            a:hover {
+                background: @light-blue;
+                color: #FFFFFF;
+                border-radius: 5px;
+            }
         }
     }
 }

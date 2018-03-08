@@ -1,21 +1,58 @@
 @import './default.less';
 
 footer {
-    a {
-        color: #FFFFFF;
-        text-decoration: none;
+    a:hover {
+        text-decoration: underline;
     }
 }
 
 .social-connect {
+    .container;
+    padding-top: 25px;
+    padding-bottom: 25px;
     background: @dark-blue;
     color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .social {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+        div {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        h3 {
+            display: inline;
+            font-weight: bold;
+        }
+        ul {
+            display: inline;
+            li {
+                display: inline;
+                padding-left: 10px;
+                padding-right: 10px;
+                img {
+                    max-height: 15px;
+                    width: auto;
+                }
+            }
+        }
+    }
 }
 .copyright-terms {
+    .container;
     background: @light-blue;
     color: #FFFFFF;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
     div {
         display: inline;
-        padding: 15px 15px 15px 15px;
+        padding-right: 15px;
     }
 }

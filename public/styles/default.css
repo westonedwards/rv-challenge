@@ -15,3 +15,13 @@
 body {
   font-family: 'OpenSans', sans-serif;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+}

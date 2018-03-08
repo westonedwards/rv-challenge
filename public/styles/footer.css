@@ -15,19 +15,72 @@
 body {
   font-family: 'OpenSans', sans-serif;
 }
-footer a {
-  color: #FFFFFF;
+a {
   text-decoration: none;
+  color: inherit;
+}
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 .social-connect {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background: #083d8c;
   color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.social-connect .social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
+.social-connect .social div {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.social-connect .social h3 {
+  display: inline;
+  font-weight: bold;
+}
+.social-connect .social ul {
+  display: inline;
+}
+.social-connect .social ul li {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.social-connect .social ul li img {
+  max-height: 15px;
+  width: auto;
 }
 .copyright-terms {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
   background: #216ddf;
   color: #FFFFFF;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 12px;
 }
 .copyright-terms div {
   display: inline;
-  padding: 15px 15px 15px 15px;
+  padding-right: 15px;
 }

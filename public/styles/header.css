@@ -15,21 +15,66 @@
 body {
   font-family: 'OpenSans', sans-serif;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+}
 .blue-header {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
   background: #083d8c;
   color: #FFFFFF;
-  padding: 15px 0px 15px 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
-.blue-header div {
-  display: inline;
+.blue-header .commercial-service {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: row;
+}
+.blue-header .commercial-service div img {
+  max-width: 15px;
+  height: auto;
+  margin-left: 10px;
 }
 nav {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
   position: relative;
   z-index: 1;
   -webkit-box-shadow: 0 8px 4px 0px #666666;
   -moz-box-shadow: 0 4px 8px 0px #666666;
   box-shadow: 0 4px 8px 0px #666666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 nav ul li {
   display: inline;
+  padding-left: 50px;
+  font-weight: bold;
+  color: #083d8c;
+}
+nav ul li a {
+  padding: 10px;
+}
+nav ul li a:hover {
+  background: #216ddf;
+  color: #FFFFFF;
+  border-radius: 5px;
 }
