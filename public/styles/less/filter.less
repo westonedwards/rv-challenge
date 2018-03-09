@@ -1,0 +1,129 @@
+@import './default.less';
+
+.filter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .filter {
+        background: #f6f6f6;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 5px;
+        width: 100%;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        div {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        div:nth-child(3) {
+            margin-right: 15px;
+        }
+        .dealer-count {
+            font-weight: bold;
+            color: @light-blue;
+        }
+        .separator-bar {
+            height: 50px;
+            width: 2px;
+            background: #ececec;
+            display: block;
+        }
+        .filter-results {
+            display: inline-block;
+            font-weight: bold;
+        }
+        .input-container {
+            display: inline-block;
+            position: relative;
+            padding-left: 50px;
+            padding-right: 35px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-size: smaller;
+            input { // Hide default browser input
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                margin-right: 15px;
+            }
+            input:checked ~ .checkmark {
+                background-color: @light-blue;
+            }
+        }
+        .input-container:nth-child(5) {
+            padding-right: 0px;
+        }
+        .checkmark {
+            position: absolute;
+            top: -75%;
+            left: 0;
+            height: 30px;
+            width: 30px;
+            background-color: #ffffff;
+            border: 1px solid #d8d8d8;
+            border-radius: 5px;
+        }
+        .checkmark:after { // Create checkmark - hidden by default
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .input-container input:checked ~ .checkmark:after { // Show checkmark when checked
+            display: block;
+        }
+        .input-container .checkmark:after {
+            left: 10px;
+            top: 10px;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+        }
+        .filter-tooltip {
+            background: #d8d8d8;
+            margin-left: 0px;
+            padding: 5px 10px 5px 10px;
+            border-radius: 5px;
+            color: @light-blue;
+            font-size: smaller;
+            position: relative;
+            cursor: pointer;
+            .filter-tooltip-text {
+                visibility: hidden;
+                width: 120px;
+                background-color: @light-blue;
+                color: #fff;
+                text-align: center;
+                border-radius: 5px;
+                padding: 5px;
+                font-weight: bold;
+                position: absolute;
+                z-index: 1;
+                bottom: 125%;
+                left: 50%;
+                margin-left: -65px;
+            }
+            .filter-tooltip-text::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: @light-blue transparent transparent transparent;
+            }
+        }
+        .filter-tooltip:hover {
+            .filter-tooltip-text {
+                visibility: visible;
+            }
+        }
+    }
+}

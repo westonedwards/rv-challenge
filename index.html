@@ -6,7 +6,8 @@
         <link type="text/css" rel="stylesheet" href="./public/styles/reset.css">
         <link type="text/css" rel="stylesheet" href="./public/styles/default.css">
         <link type="text/css" rel="stylesheet" href="./public/styles/header.css">
-        <link type="text/css" rel="stylesheet" href="./public/styles/main.css">
+        <link type="text/css" rel="stylesheet" href="./public/styles/filter.css">
+        <link type="text/css" rel="stylesheet" href="./public/styles/dealer.css">
         <link type="text/css" rel="stylesheet" href="./public/styles/footer.css">
         <title>Red Ventures Challenge - Created by Weston Edwards</title>
     </head>
@@ -36,32 +37,41 @@
         </header>
         <!-- Content -->
         <main class="container">
-            <div class="filter">
-                <div class="dealer-count">
-                    7 dealers in 28226
+            <!-- Filter -->
+            <div class="filter-container">
+                <div class="filter">
+                    <div class="dealer-count">
+                        7 dealers in 28226
+                    </div>
+                    <div class="separator-bar"></div>
+                    <div>
+                        <div class="filter-results"><strong>Filter Results</strong></div>
+                        <label class="input-container">Service
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="input-container">Installation
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="input-container">Residential
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="input-container">Commercial
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="filter-tooltip">?
+                        <span class="filter-tooltip-text">Select an option to display results</span>
+                    </div>
                 </div>
-                <div class="separator-bar"></div>
-                <div>
-                    <div class="filter-results"><strong>Filter Results</strong></div>
-                    <label class="input-container">Service
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="input-container">Installation
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="input-container">Residential
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="input-container">Commercial
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="filter-tooltip">?
-                    <span class="filter-tooltip-text">Select an option to display results</span>
+            </div>
+            <!-- Filter end -->
+            <div class="filtered-data">
+                <div class="dealer-box">
+
                 </div>
             </div>
         </main>
