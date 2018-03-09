@@ -34,9 +34,121 @@ main {
 }
 .filter {
   background: #f6f6f6;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-radius: 5px;
   width: 100%;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.filter div {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.filter div:nth-child(3) {
+  margin-right: 15px;
+}
+.filter .dealer-count {
+  font-weight: bold;
+  color: #216ddf;
+}
+.filter .separator-bar {
+  height: 50px;
+  width: 2px;
+  background: #ececec;
+  display: block;
+}
+.filter .filter-results {
+  display: inline-block;
+  font-weight: bold;
+}
+.filter .input-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 50px;
+  padding-right: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: smaller;
+}
+.filter .input-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.filter .input-container input:checked ~ .checkmark {
+  background-color: #216ddf;
+}
+.filter .input-container:nth-child(5) {
+  padding-right: 0px;
+}
+.filter .checkmark {
+  position: absolute;
+  top: -75%;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #ffffff;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+}
+.filter .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.filter .input-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.filter .input-container .checkmark:after {
+  left: 10px;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+}
+.filter .filter-tooltip {
+  background: #d8d8d8;
+  margin-left: 0px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  color: #216ddf;
+  font-size: smaller;
+  position: relative;
+  cursor: pointer;
+}
+.filter .filter-tooltip .filter-tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #216ddf;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -65px;
+}
+.filter .filter-tooltip .filter-tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #216ddf transparent transparent transparent;
+}
+.filter .filter-tooltip:hover .filter-tooltip-text {
+  visibility: visible;
 }
