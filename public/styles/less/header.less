@@ -38,10 +38,17 @@ nav {
     padding-bottom: 25px;
     .responsive(768px, {
         flex-direction: row;
+        padding-top: 5px;
+        padding-bottom: 5px;
     });
+    div:nth-child(2) {
+        .responsive(768px, {
+            order: 2;
+        });  
+    }
     img {
         .responsive(768px, {
-            max-width: 75%;
+            max-width: 95%;
         });
     }
     .mobile-menu-image {
@@ -52,25 +59,27 @@ nav {
         width: 100px;
         cursor: pointer;
         .responsive(768px, {
-            display: block;
+            display: inline-block;
         });
     }
-    ul {
+    .nav-items {
         .responsive(768px, {
             display: none;
         });
-        li {
-            display: inline;
-            padding-left: 50px;
-            font-weight: bold;
-            color: @dark-blue;
-            a {
-                padding: 10px;
-            }
-            a:hover {
-                background: @dark-blue;
-                color: #FFFFFF;
-                border-radius: 5px;
+        ul {
+            li {
+                display: inline;
+                padding-left: 50px;
+                font-weight: bold;
+                color: @dark-blue;
+                a {
+                    padding: 10px;
+                }
+                a:hover {
+                    background: @dark-blue;
+                    color: #FFFFFF;
+                    border-radius: 5px;
+                }
             }
         }
     }
@@ -86,6 +95,13 @@ nav {
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         cursor: pointer;
+        white-space: nowrap;
+        .responsive(768px, {
+            margin-right: 20px;
+            height: 50%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        });
         .location-icon {
             background: url('../images/location-icon.png') no-repeat center center;
             background-size: contain;
@@ -95,9 +111,18 @@ nav {
             height: 15px;
             left: 10px;
             top: 16px;
+            .responsive(768px, {
+                top: 6px;
+            });
+        }
+        .pool-span {
+            .responsive(768px, {
+                display: none;
+            });
         }
     }
     button:hover {
         background: #f6f6f6;
     }
 }
+

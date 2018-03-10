@@ -12,10 +12,21 @@
   src: url('fonts/OpenSans-Italic.ttf') format('truetype');
   font-style: italic;
 }
-body {
+* {
+  font-family: 'OpenSans', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'OpenSans', sans-serif;
+}
+div {
   font-family: 'OpenSans', sans-serif;
 }
 a {
+  font-family: 'OpenSans', sans-serif;
   text-decoration: none;
   color: inherit;
 }
@@ -119,11 +130,18 @@ nav {
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   nav {
     flex-direction: row;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  nav div:nth-child(2) {
+    order: 2;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   nav img {
-    max-width: 75%;
+    max-width: 95%;
   }
 }
 nav .mobile-menu-image {
@@ -136,24 +154,24 @@ nav .mobile-menu-image {
 }
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   nav .mobile-menu-image {
-    display: block;
+    display: inline-block;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-  nav ul {
+  nav .nav-items {
     display: none;
   }
 }
-nav ul li {
+nav .nav-items ul li {
   display: inline;
   padding-left: 50px;
   font-weight: bold;
   color: #083d8c;
 }
-nav ul li a {
+nav .nav-items ul li a {
   padding: 10px;
 }
-nav ul li a:hover {
+nav .nav-items ul li a:hover {
   background: #083d8c;
   color: #FFFFFF;
   border-radius: 5px;
@@ -170,6 +188,15 @@ nav button {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   cursor: pointer;
+  white-space: nowrap;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  nav button {
+    margin-right: 20px;
+    height: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }
 nav button .location-icon {
   background: url('../images/location-icon.png') no-repeat center center;
@@ -180,6 +207,16 @@ nav button .location-icon {
   height: 15px;
   left: 10px;
   top: 16px;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  nav button .location-icon {
+    top: 6px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  nav button .pool-span {
+    display: none;
+  }
 }
 nav button:hover {
   background: #f6f6f6;

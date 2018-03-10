@@ -12,10 +12,21 @@
   src: url('fonts/OpenSans-Italic.ttf') format('truetype');
   font-style: italic;
 }
-body {
+* {
+  font-family: 'OpenSans', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'OpenSans', sans-serif;
+}
+div {
   font-family: 'OpenSans', sans-serif;
 }
 a {
+  font-family: 'OpenSans', sans-serif;
   text-decoration: none;
   color: inherit;
 }
