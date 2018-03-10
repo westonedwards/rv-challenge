@@ -8,6 +8,7 @@
         <link type="text/css" rel="stylesheet" href="./public/styles/header.css">
         <link type="text/css" rel="stylesheet" href="./public/styles/filter.css">
         <link type="text/css" rel="stylesheet" href="./public/styles/dealer.css">
+        <link type="text/css" rel="stylesheet" href="./public/styles/modal.css">
         <link type="text/css" rel="stylesheet" href="./public/styles/footer.css">
         <title>Red Ventures Challenge - Created by Weston Edwards</title>
     </head>
@@ -26,7 +27,7 @@
                     <img src="./public/images/pool-pros-logo.png" alt="Pool Pros Logo">
                 </div>
                 <div class="mobile-menu-image"></div>
-                <div id="nav-items" class="nav-items nav-items-mobile">
+                <div id="nav-items" class="nav-items">
                     <ul>
                         <li><a href="#">Pools & Spas</a></li>
                         <li><a href="#">Supplies</a></li>
@@ -82,7 +83,7 @@
                                 <div><h1>1.888.888.8888</h1></div>
                             </div>
                             <div><em>Can't talk now? Click below to send an email.</em></div>
-                            <button><span class="email-icon"></span>Contact this Pro</button>
+                            <button id="myBtn"><span class="email-icon"></span>Contact this Pro</button>
                             <div class="dealer-hours">
                                 <h3>Business Hours</h3>
                                 <p>Weekdays 7:00am-7:00pm</p>
@@ -97,6 +98,38 @@
                         <div class="installation-pro"><span></span>Installation Pro</div>
                         <div class="installation-pro"><span></span>Installation Pro</div>
                     </div>
+                    <!-- Modal -->
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="modal-blue-header">
+                                <h3>EMAIL</h3>
+                                <h1>Aqua Experts</h1>
+                            </div>
+                            <div class="modal-contact-form">
+                                <p>Fill out the form below and Aqua Experts will get in touch.</p>
+                                <form>
+                                    <label>First and last name</label>
+                                    <input type="text" placeholder="Jane Smith"/>
+                                    <label>Phone number</label>
+                                    <input class="phone" type="tel"/>
+                                    <label>Email address</label>
+                                    <input type="email"/>
+                                    <label>Comments or questions</label>
+                                    <textarea></textarea>
+                                    <label>Do you currently own a pool or spa?</label>
+                                    <button class="form-button form-button-active">Yes</button>
+                                    <button class="form-button">No</button>
+                                    <div class="contact-form-separator"></div>
+                                    <button class="form-submit-button">Send my email<span></span></button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal end -->
                 </div>
                 <div class="dealer-box">
                     <h1>Aqua Experts</h1>
@@ -135,5 +168,6 @@
         </footer>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="./public/scripts/navigation.js"></script>
+        <script src="./public/scripts/modal.js"></script>
     </body>
 </html>

@@ -65,10 +65,30 @@ nav {
     }
     .nav-items {
         .responsive(768px, {
+            width: 100%;
+            background: @dark-blue;
+            position: absolute;
+            z-index: 2;
+            top: 100%;
+            left: 0px;
+            height: 100px;
             display: none;
         });
         ul {
+            .responsive(768px, {
+                z-index: 3;
+            });
             li {
+                .responsive(768px, {
+                    background: @dark-blue;
+                    display: block;
+                    padding-left: 0px;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    border-top: 1px solid #ffffff;
+                    text-align: center;
+                    color: #ffffff;
+                });
                 display: inline;
                 padding-left: 50px;
                 font-weight: bold;
@@ -82,9 +102,14 @@ nav {
                     border-radius: 5px;
                 }
             }
+            li:nth-child(4) {
+                .responsive(768px, {
+                    border-bottom: 1px solid #ffffff;
+                });
+            }   
         }
     }
-    .nav-items-mobile {
+    .xnav-items-mobile {
         width: 100%;
         background: @dark-blue;
         position: absolute;
@@ -139,7 +164,7 @@ nav {
             left: 10px;
             top: 16px;
             .responsive(768px, {
-                top: 6px;
+                top: 8px;
             });
         }
         .pool-span {
