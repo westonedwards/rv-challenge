@@ -29,7 +29,18 @@ main {
   padding-left: 35px;
   padding-right: 35px;
 }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .row-flex {
   display: flex;
   flex-direction: row;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .row-flex {
+    flex-direction: column;
+  }
 }

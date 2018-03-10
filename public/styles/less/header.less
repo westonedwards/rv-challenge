@@ -1,6 +1,9 @@
 @import './default.less';
 
 .blue-header {
+    .responsive(768px, {
+        display: none;
+    });
     .container;
     background: @dark-blue;
     color: #FFFFFF;
@@ -33,7 +36,29 @@ nav {
     align-items: center;
     padding-top: 25px;
     padding-bottom: 25px;
+    .responsive(768px, {
+        flex-direction: row;
+    });
+    img {
+        .responsive(768px, {
+            max-width: 75%;
+        });
+    }
+    .mobile-menu-image {
+        display: none;
+        background: url('../images/menu-icon-mobile.png') no-repeat center center;
+        background-size: contain;
+        height: 50px;
+        width: 100px;
+        cursor: pointer;
+        .responsive(768px, {
+            display: block;
+        });
+    }
     ul {
+        .responsive(768px, {
+            display: none;
+        });
         li {
             display: inline;
             padding-left: 50px;
@@ -48,5 +73,31 @@ nav {
                 border-radius: 5px;
             }
         }
+    }
+    button {
+        background: #ffffff;
+        color: @light-blue;
+        padding: 15px 10px 15px 37px;
+        font-weight: bold;
+        border: 1px solid @light-blue;
+        border-radius: 3px;
+        font-size: 15px;
+        position: relative;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        .location-icon {
+            background: url('../images/location-icon.png') no-repeat center center;
+            background-size: contain;
+            display: block;
+            position: absolute;
+            width: 17px;
+            height: 15px;
+            left: 10px;
+            top: 16px;
+        }
+    }
+    button:hover {
+        background: #f6f6f6;
     }
 }

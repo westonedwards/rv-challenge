@@ -29,9 +29,20 @@ main {
   padding-left: 35px;
   padding-right: 35px;
 }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .row-flex {
   display: flex;
   flex-direction: row;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .row-flex {
+    flex-direction: column;
+  }
 }
 footer a:hover {
   text-decoration: underline;
@@ -50,11 +61,22 @@ footer a:hover {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .social-connect {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .social-connect .social {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-top: 20px;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .social-connect .social {
+    flex-direction: column;
+  }
 }
 .social-connect .social div {
   margin-left: 10px;
@@ -87,6 +109,12 @@ footer a:hover {
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 12px;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .copyright-terms {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 .copyright-terms div {
   display: inline;
