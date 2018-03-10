@@ -9,7 +9,7 @@ $(document).ready(() => {
     $.get(url, (data, status) => {
         dealerCount.html(data.dealers.length);
         zipCode.html(data.zipcode);
-        data.dealers.map((dealer) => {
+        data.dealers.map((dealer, index) => {
             return html += 
                 `<div class="dealer-box">
                     <div class="dealer-padded-content">
@@ -39,10 +39,10 @@ $(document).ready(() => {
                             <span class="close">&times;</span>
                             <div class="modal-blue-header">
                                 <h3>EMAIL</h3>
-                                <h1>Aqua Experts</h1>
+                                <h1>${dealer.data.name}</h1>
                             </div>
                             <div class="modal-contact-form">
-                                <p>Fill out the form below and Aqua Experts will get in touch.</p>
+                                <p>Fill out the form below and ${dealer.data.name} will get in touch.</p>
                                 <form>
                                     <label>First and last name</label>
                                     <input type="text" placeholder="Jane Smith"/>

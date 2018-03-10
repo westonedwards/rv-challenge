@@ -1,22 +1,22 @@
 $(document).ready(() => {
-    const modal = $('.myModal');
-    const openButton = $('.myBtn');
-    const closeButton = $('.close');
-    const formButtons = $('.form-button');
+    const staticFilteredData = $('#filtered-data');
+    const modal = staticFilteredData.find('.myModal');
+    const openButton = '.myBtn';
+    const closeButton = '.close';
+    const formButtons = '.form-button';
 
-    $('.dealer-details').on('click', 'button', () => {
-        alert('got here');
-        modal.addClass('modal-show');
+    staticFilteredData.on('click', openButton, function() {
+        $(this).parent().parent().parent().find('.myModal').addClass('modal-show');
         $('body').css('overflow', 'hidden');
     });
 
-    closeButton.on('click', () => {
-        modal.removeClass('modal-show');
+    staticFilteredData.on('click', closeButton, function() {
+        $(this).parent().parent().removeClass('modal-show');
         $('body').css('overflow', 'auto');
     });
 
-    formButtons.on('click', (e) => {
+    staticFilteredData.on('click', formButtons, (e) => {
         e.preventDefault();
-        formButtons.toggleClass('form-button-active');
+        $(formButtons).toggleClass('form-button-active');
     });
 });
