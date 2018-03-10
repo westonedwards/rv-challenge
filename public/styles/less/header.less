@@ -36,6 +36,7 @@ nav {
     align-items: center;
     padding-top: 25px;
     padding-bottom: 25px;
+    position: relative;
     .responsive(768px, {
         flex-direction: row;
         padding-top: 5px;
@@ -80,6 +81,32 @@ nav {
                     color: #FFFFFF;
                     border-radius: 5px;
                 }
+            }
+        }
+    }
+    .nav-items-mobile {
+        width: 100%;
+        background: @dark-blue;
+        position: absolute;
+        z-index: 2;
+        top: 100%;
+        left: 0px;
+        height: 100px;
+        display: none;
+        ul {
+            z-index: 3;
+            li {
+                background: @dark-blue;
+                display: block;
+                padding-left: 0px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                border-top: 1px solid #ffffff;
+                text-align: center;
+                color: #ffffff;
+            }
+            li:nth-child(4) {
+                border-bottom: 1px solid #ffffff;
             }
         }
     }
