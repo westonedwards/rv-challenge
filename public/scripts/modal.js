@@ -1,10 +1,11 @@
 $(document).ready(() => {
-    const modal = $('#myModal');
-    const openButton = $('#myBtn');
+    const modal = $('.myModal');
+    const openButton = $('.myBtn');
     const closeButton = $('.close');
     const formButtons = $('.form-button');
 
-    openButton.on('click', () => {
+    $('.dealer-details').on('click', 'button', () => {
+        alert('got here');
         modal.addClass('modal-show');
         $('body').css('overflow', 'hidden');
     });
