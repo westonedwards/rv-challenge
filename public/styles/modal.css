@@ -68,14 +68,17 @@ main {
   background-color: #000000;
   background-color: rgba(0, 0, 0, 0.4);
 }
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-}
 .modal .modal-content {
   background-color: #ffffff;
   margin: auto;
   width: 45%;
   position: relative;
   margin-bottom: 55px;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .modal .modal-content {
+    width: 90%;
+  }
 }
 .modal .modal-content .close {
   position: absolute;

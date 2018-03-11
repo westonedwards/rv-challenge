@@ -1,19 +1,15 @@
-const express = require('Express'),
+const express = require('express'),
     dealerData = require('./dealers.json'),
-    port = 8080,
-    app = express();
+    port = 8081,
+    app = express(),
+    cors = require('cors');
 
-/* Start Express */
-app.listen(port);
-console.log('Express listening on port: ' + port);
-
-/* CORS setup */
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+app.use(cors());
 
 app.get('/dealerData', (req, res) => {
     res.send(dealerData);
 });
+
+/* Start Express */
+app.listen(port);
+console.log('Express listening on port: ' + port);

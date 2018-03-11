@@ -100,6 +100,11 @@ main {
   margin-top: 35px;
   margin-bottom: 35px;
 }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .dealer-box .dealer-padded-content .vertical-line-separator {
+    display: none;
+  }
+}
 .dealer-box .dealer-padded-content .dealer-details {
   text-align: center;
 }
@@ -115,6 +120,25 @@ main {
     flex-direction: column;
   }
 }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .dealer-box .dealer-padded-content .dealer-details .phone-container {
+    background: #216ddf;
+    flex-direction: row;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+  }
+}
+.dealer-box .dealer-padded-content .dealer-details .phone-container .mobile-text {
+  display: none;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .dealer-box .dealer-padded-content .dealer-details .phone-container .mobile-text {
+    margin-left: 15px;
+    display: block;
+  }
+}
 .dealer-box .dealer-padded-content .dealer-details .phone-container .phone-icon-img {
   background: url('../images/phone-icon-desktop.png');
   background-size: cover;
@@ -122,10 +146,22 @@ main {
   height: 28px;
   width: 28px;
 }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .dealer-box .dealer-padded-content .dealer-details .phone-container .phone-icon-img {
+    background: url('../images/phone-icon-mobile.png');
+    background-size: contain;
+  }
+}
 .dealer-box .dealer-padded-content .dealer-details .phone-container h1 {
   font-weight: bold;
   font-size: 32px;
   margin-left: 15px;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .dealer-box .dealer-padded-content .dealer-details .phone-container h1 {
+    margin-left: 10px;
+    font-size: 22px;
+  }
 }
 .dealer-box .dealer-padded-content .dealer-details em {
   font-style: italic;

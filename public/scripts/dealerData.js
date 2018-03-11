@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    const url = 'http://www.wes2k.com:8080/dealerData',
+    const url = 'http://www.wes2k.com:8081/dealerData',
         dealerCount = $('#dealer-count'),
         zipCode = $('#dealer-zipcode'),
         filteredData = $('#filtered-data'),
@@ -15,7 +15,7 @@ $(document).ready(() => {
             let index = filterArr.indexOf(dealerType);
             if($(this).is(":checked")) {
                 if(index === -1) {
-                    filterArr.push(dealerType)
+                    filterArr.push(dealerType);
                 }
             }
             else {
@@ -28,7 +28,6 @@ $(document).ready(() => {
                     filterArr = [];
                 }
             }
-            console.log(index, dealerType, filterArr);
             getData(filterArr);
         });
     });
@@ -67,6 +66,7 @@ $(document).ready(() => {
                         <div class="dealer-details">
                             <div class="phone-container">
                                 <div><span class="phone-icon-img"></span></div>
+                                <div class="mobile-text">Tap to call</div>
                                 <div><h1>${dealer.data.phone1}</h1></div>
                             </div>
                             <div><em>Can\'t talk now? Click below to send an email.</em></div>

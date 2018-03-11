@@ -78,6 +78,14 @@ footer a:hover {
     padding-right: 10px;
   }
 }
+.social-connect .footer-logo {
+  text-align: center;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .social-connect .footer-logo img {
+    max-width: 90%;
+  }
+}
 .social-connect .social {
   display: flex;
   flex-direction: row;
@@ -127,7 +135,40 @@ footer a:hover {
     padding-right: 10px;
   }
 }
-.copyright-terms div {
+.copyright-terms .d-d-mobile {
+  display: none;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .copyright-terms .d-d-mobile {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .copyright-terms .d-d-mobile div {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .copyright-terms .d-d-mobile div img {
+    max-width: 9px;
+    height: auto;
+    margin-left: 10px;
+  }
+}
+.copyright-terms .d-d-mobile .d-d-mobile-separator {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background: #ffffff;
+  height: 1px;
+  width: 100%;
+}
+.copyright-terms .copyright-terms div {
   display: inline;
   padding-right: 15px;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .copyright-terms .copyright-terms div {
+    padding-right: 2px;
+  }
 }

@@ -35,6 +35,9 @@
             display: block;
             margin-top: 35px;
             margin-bottom: 35px;
+            .responsive(768px, {
+                display: none;
+            });
         }
         .dealer-details {
             text-align: center;
@@ -43,17 +46,40 @@
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 15px;
+                .responsive(768px, {
+                    background: @light-blue;
+                    flex-direction: row;
+                    color: #ffffff;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    margin-top: 15px;
+                });
+                .mobile-text {
+                    display: none;
+                    .responsive(768px, {
+                        margin-left: 15px;
+                        display: block;
+                    });
+                }
                 .phone-icon-img {
                     background: url('../images/phone-icon-desktop.png');
                     background-size: cover;
                     display: block;
                     height: 28px;
                     width: 28px;
+                    .responsive(768px, {
+                        background: url('../images/phone-icon-mobile.png');
+                        background-size: contain;
+                    });
                 }
                 h1 {
                     font-weight: bold;
                     font-size: 32px;
                     margin-left: 15px;
+                    .responsive(768px, {
+                        margin-left: 10px;
+                        font-size: 22px;
+                    });
                 }
             }
             em {

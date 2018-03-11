@@ -16,6 +16,14 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .footer-logo {
+        text-align: center;
+        img {
+            .responsive(768px, {
+                max-width: 90%;
+            });
+        }
+    }
     .social {
         .row-flex;
         align-items: center;
@@ -50,8 +58,39 @@ footer {
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 12px;
-    div {
-        display: inline;
-        padding-right: 15px;
+    .d-d-mobile {
+        display: none;
+        .responsive(768px, {
+            display: inline;
+        });
+        div { 
+            .responsive(768px, {
+                display: inline;
+            });
+            img {
+                .responsive(768px, {
+                    max-width: 9px;
+                    height: auto;
+                    margin-left: 10px;
+                });
+            }
+        }
+        .d-d-mobile-separator {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            background: #ffffff;
+            height: 1px;
+            width: 100%;
+        }
+    }
+    .copyright-terms {
+        div {
+            display: inline;
+            padding-right: 15px;
+            .responsive(768px, {
+                padding-right: 2px;
+            });
+        }
     }
 }
