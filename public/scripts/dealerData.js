@@ -6,6 +6,7 @@ $(document).ready(() => {
         checkboxes = $('.filters').find('input:checkbox');
     let filterArr = ['Residential Pro', 'Commercial Pro', 'Service Pro', 'Installation Pro'];
     
+    // Check for changes to checkboxes and add/remove from filter
     checkboxes.each(function() {
         let checkbox = $(this),
             dealerType = $(this).data('id');
@@ -32,19 +33,7 @@ $(document).ready(() => {
         });
     });
 
-    /* $('#commercial').change(function() {
-        if($(this).is(":checked")) {
-            filterArr.push('Commercial Pro')
-        }
-        else {
-            let index = filterArr.indexOf('Commercial Pro');
-            if (index > -1) {
-                filterArr.splice(index, 1);
-            }
-        }
-        getData(filterArr);
-    }); */
-
+    // Get JSON data and push to screen
     const getData = (criteria) => {
         $.get(url, (data, status) => {
             if(data) {
@@ -59,29 +48,16 @@ $(document).ready(() => {
         });
     };
 
-    /* $.get(url, (data, status) => {
-        if(data) {
-            dealerCount.html(data.dealers.length);
-            zipCode.html(data.zipcode);
-            filteredData.html(renderDealerHtml(
-                filteredDealers(data.dealers, 'Commercial Pro')
-            ));
-        }
-    }); */
-    
-
+    // Filter dealers based on checkbox array data
     const filteredDealers = (dealers, criteria) => {
-        /* return dealers.filter((dealer) => {
-            return dealer.data.certifications.indexOf(criteria) > -1; */
-            
-            return dealers.filter(dealer => {
-                return dealer.data.certifications.find(certification => {
-                    return criteria.includes(certification);
-                });
+        return dealers.filter(dealer => {
+            return dealer.data.certifications.find(certification => {
+                return criteria.includes(certification);
             });
-        //});
+        });
     };
 
+    // Render the JSON html
     const renderDealerHtml = (dealers) => {
         return dealers.map((dealer, index) => 
                 `<div class="dealer-box">
@@ -142,5 +118,6 @@ $(document).ready(() => {
         ).join('');
     };
 
+    // Load initial data
     getData(filterArr);
 });
