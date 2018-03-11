@@ -1,23 +1,33 @@
 $(document).ready(() => {
-    const url = 'http://localhost:8080/dealerData';
-    let dealerCount = $('#dealer-count');
-    let zipCode = $('#dealer-zipcode');
-    let filteredData = $('#filtered-data');
-    let filterArr = [];
-
-    let checkboxes = $('.filters').find('input:checkbox');
+    const url = 'http://www.wes2k.com:8080/dealerData',
+        dealerCount = $('#dealer-count'),
+        zipCode = $('#dealer-zipcode'),
+        filteredData = $('#filtered-data'),
+        checkboxes = $('.filters').find('input:checkbox');
+    let filterArr = ['Residential Pro', 'Commercial Pro', 'Service Pro', 'Installation Pro'];
+    
     checkboxes.each(function() {
-        let checkbox = $(this);
+        let checkbox = $(this),
+            dealerType = $(this).data('id');
+        
         checkbox.change(function() {
+            let index = filterArr.indexOf(dealerType);
             if($(this).is(":checked")) {
-                filterArr.push('Commercial Pro')
-            }
-            else {
-                let index = filterArr.indexOf('Commercial Pro');
-                if (index > -1) {
-                    filterArr.splice(index, 1);
+                if(index === -1) {
+                    filterArr.push(dealerType)
                 }
             }
+            else {
+                if(filterArr.length > 1) {
+                    if (index > -1) {
+                        filterArr.splice(index, 1);
+                    }
+                }
+                else {
+                    filterArr = [];
+                }
+            }
+            console.log(index, dealerType, filterArr);
             getData(filterArr);
         });
     });
@@ -131,4 +141,6 @@ $(document).ready(() => {
                 </div>`
         ).join('');
     };
+
+    getData(filterArr);
 });
