@@ -36,7 +36,6 @@ $(document).ready(() => {
     const getData = (criteria) => {
         $.get(url, (data, status) => {
             if(data) {
-                dealerCount.html(data.dealers.length);
                 zipCode.html(data.zipcode);
                 filteredData.html(
                     renderDealerHtml(
@@ -58,6 +57,7 @@ $(document).ready(() => {
 
     // Render the JSON html
     const renderDealerHtml = (dealers) => {
+        dealerCount.html(dealers.length);
         return dealers.map((dealer, index) => 
                 `<div class="dealer-box">
                     <div class="dealer-padded-content">
@@ -93,11 +93,11 @@ $(document).ready(() => {
                             <div class="modal-contact-form">
                                 <p>Fill out the form below and ${dealer.data.name} will get in touch.</p>
                                 <form>
-                                    <label>First and last name</label>
+                                    <label>First and last name<span class="form-image"></span></label>
                                     <input type="text" placeholder="Jane Smith"/>
-                                    <label>Phone number</label>
+                                    <label>Phone number<span class="form-image"></span></label>
                                     <input class="phone" type="tel"/>
-                                    <label>Email address</label>
+                                    <label>Email address<span class="form-image"></span></label>
                                     <input type="email"/>
                                     <label>Comments or questions</label>
                                     <textarea></textarea>
