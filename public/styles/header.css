@@ -182,14 +182,14 @@ nav .nav-items ul li {
 }
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   nav .nav-items ul li {
-    background: #083d8c;
+    background: #f6f6f6;
     display: block;
     padding-left: 0px;
     padding-top: 15px;
     padding-bottom: 15px;
     border-top: 1px solid #ffffff;
-    text-align: center;
-    color: #ffffff;
+    color: #616161;
+    position: relative;
   }
 }
 nav .nav-items ul li a {
@@ -199,6 +199,18 @@ nav .nav-items ul li a:hover {
   background: #083d8c;
   color: #FFFFFF;
   border-radius: 5px;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  nav .nav-items ul li span {
+    background: url('../images/next-arrow.png') no-repeat center center;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    width: 17px;
+    height: 15px;
+    right: 10px;
+    top: 16px;
+  }
 }
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   nav .nav-items ul li:nth-child(4) {

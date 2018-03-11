@@ -80,14 +80,14 @@ nav {
             });
             li {
                 .responsive(768px, {
-                    background: @dark-blue;
+                    background: #f6f6f6;
                     display: block;
                     padding-left: 0px;
                     padding-top: 15px;
                     padding-bottom: 15px;
                     border-top: 1px solid #ffffff;
-                    text-align: center;
-                    color: #ffffff;
+                    color: #616161;
+                    position: relative;
                 });
                 display: inline;
                 padding-left: 50px;
@@ -100,6 +100,18 @@ nav {
                     background: @dark-blue;
                     color: #FFFFFF;
                     border-radius: 5px;
+                }
+                span {
+                    .responsive(768px, {
+                        background: url('../images/next-arrow.png') no-repeat center center;
+                        background-size: cover;
+                        display: block;
+                        position: absolute;
+                        width: 17px;
+                        height: 15px;
+                        right: 10px;
+                        top: 16px;
+                    });
                 }
             }
             li:nth-child(4) {

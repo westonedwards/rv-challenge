@@ -3,14 +3,77 @@ $(document).ready(() => {
     let dealerCount = $('#dealer-count');
     let zipCode = $('#dealer-zipcode');
     let filteredData = $('#filtered-data');
-    let html = [];
-    let modalHtml = [];
+    let filterArr = [];
 
-    $.get(url, (data, status) => {
-        dealerCount.html(data.dealers.length);
-        zipCode.html(data.zipcode);
-        data.dealers.map((dealer, index) => {
-            return html += 
+    let checkboxes = $('.filters').find('input:checkbox');
+    checkboxes.each(function() {
+        let checkbox = $(this);
+        checkbox.change(function() {
+            if($(this).is(":checked")) {
+                filterArr.push('Commercial Pro')
+            }
+            else {
+                let index = filterArr.indexOf('Commercial Pro');
+                if (index > -1) {
+                    filterArr.splice(index, 1);
+                }
+            }
+            getData(filterArr);
+        });
+    });
+
+    /* $('#commercial').change(function() {
+        if($(this).is(":checked")) {
+            filterArr.push('Commercial Pro')
+        }
+        else {
+            let index = filterArr.indexOf('Commercial Pro');
+            if (index > -1) {
+                filterArr.splice(index, 1);
+            }
+        }
+        getData(filterArr);
+    }); */
+
+    const getData = (criteria) => {
+        $.get(url, (data, status) => {
+            if(data) {
+                dealerCount.html(data.dealers.length);
+                zipCode.html(data.zipcode);
+                filteredData.html(
+                    renderDealerHtml(
+                        filteredDealers(data.dealers, criteria)
+                    )
+                );
+            }
+        });
+    };
+
+    /* $.get(url, (data, status) => {
+        if(data) {
+            dealerCount.html(data.dealers.length);
+            zipCode.html(data.zipcode);
+            filteredData.html(renderDealerHtml(
+                filteredDealers(data.dealers, 'Commercial Pro')
+            ));
+        }
+    }); */
+    
+
+    const filteredDealers = (dealers, criteria) => {
+        /* return dealers.filter((dealer) => {
+            return dealer.data.certifications.indexOf(criteria) > -1; */
+            
+            return dealers.filter(dealer => {
+                return dealer.data.certifications.find(certification => {
+                    return criteria.includes(certification);
+                });
+            });
+        //});
+    };
+
+    const renderDealerHtml = (dealers) => {
+        return dealers.map((dealer, index) => 
                 `<div class="dealer-box">
                     <div class="dealer-padded-content">
                         <div class="dealer-header"><h1>${dealer.data.name}</h1></div>
@@ -65,8 +128,7 @@ $(document).ready(() => {
                         </div>
                     </div>
                     <!-- Modal end -->
-                </div>`;
-        });
-        filteredData.html(html);
-    });
+                </div>`
+        ).join('');
+    };
 });

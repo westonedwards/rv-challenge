@@ -2,19 +2,20 @@
 
 #filtered-data {
     .row-flex;
-    justify-content: space-between;
+    xjustify-content: space-between;
     flex-wrap: wrap;
 }
 
 .dealer-box {
-    width: 32%;
     max-width: 100%;
     -webkit-box-shadow: 0px 1px 4px 1px #999999;
     -moz-box-shadow: 0px 1px 4px 1px #999999;
     box-shadow: 0px 1px 4px 1px #999999;
     display: block;
     border-radius: 8px;
+    flex: 0 0 calc(~"(100% / 3) - 20px");
     margin-bottom: 10px;
+    margin-right: 20px;
     .responsive(768px, {
         width: 100%;
     });
