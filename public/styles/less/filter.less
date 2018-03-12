@@ -13,76 +13,132 @@
         .row-flex;
         justify-content: center;
         align-items: center;
+        .responsive(768px, {
+            display: block;
+        });
         div {
             margin-left: 25px;
             margin-right: 25px;
         }
         div:nth-child(3) {
             margin-right: 15px;
+            .responsive(768px, {
+                margin-right: 0px;
+            });
         }
         .dealer-count {
             font-weight: bold;
             color: @light-blue;
+            .responsive(768px, {
+                margin-left: 10px;
+                margin-right: 5px;
+                display: inline;
+            });
         }
         .separator-bar {
             height: 50px;
             width: 2px;
             background: #ececec;
             display: block;
+            .responsive(768px, {
+                display: none;
+            });
         }
-        .filter-results {
-            display: inline-block;
-            font-weight: bold;
-        }
-        .input-container {
-            display: inline-block;
-            position: relative;
-            padding-left: 50px;
-            padding-right: 35px;
-            cursor: pointer;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            font-size: smaller;
-            input { // Hide default browser input
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-                margin-right: 15px;
+        /*.filters {
+            display: flex;
+            flex-direction: row;
+            justify-content: center; */
+            .filter-results {
+                display: inline-block;
+                font-weight: bold;
+                .responsive(768px, {
+                    background: #ffffff;
+                    border: 1px solid #d8d8d8;
+                    padding: 10px;
+                    margin-right: 10px;
+                });
             }
-            input:checked ~ .checkmark {
-                background-color: @light-blue;
+            .filter-results-arrow {
+                display: none;
+                .responsive(768px, {
+                    display: inline-block;
+                    background: #ffffff;
+                    border: 1px solid #d8d8d8;
+                    border-left: 0px;
+                    padding: 10px;
+                    padding-right: 11px;
+                    margin-left: -4px;
+                });
             }
-        }
-        .input-container:nth-child(5) {
-            padding-right: 0px;
-        }
-        .checkmark {
-            position: absolute;
-            top: -75%;
-            left: 0;
-            height: 30px;
-            width: 30px;
-            background-color: #ffffff;
-            border: 1px solid #d8d8d8;
-            border-radius: 5px;
-        }
-        .checkmark:after { // Create checkmark - hidden by default
-            content: "";
-            position: absolute;
-            display: none;
-        }
-        .input-container input:checked ~ .checkmark:after { // Show checkmark when checked
-            display: block;
-        }
-        .input-container .checkmark:after {
-            left: 10px;
-            top: 10px;
-            width: 10px;
-            height: 10px;
-            background: #fff;
-        }
+            .filter-border-bottom-none {
+                border-bottom: 0px;
+            }
+            .input-items {
+                .responsive(768px, {
+                    background: #ffffff;
+                    border: 1px solid #d8d8d8;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    padding-left: 10px;
+                    display: none;
+                });
+                .input-container {
+                    display: inline-block;
+                    position: relative;
+                    padding-left: 50px;
+                    padding-right: 35px;
+                    cursor: pointer;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    font-size: smaller;
+                    position: relative;
+                    .responsive(768px, {
+                        display: block;
+                        margin-top: 35px;
+                        margin-bottom: 35px;
+                    });
+                    input { // Hide default browser input
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        margin-right: 15px;
+                    }
+                    input:checked ~ .checkmark {
+                        background-color: @light-blue;
+                    }
+                }
+                .input-container:nth-child(5) {
+                    padding-right: 0px;
+                }
+                .checkmark {
+                    position: absolute;
+                    top: -75%;
+                    left: 0;
+                    height: 30px;
+                    width: 30px;
+                    background-color: #ffffff;
+                    border: 1px solid #d8d8d8;
+                    border-radius: 5px;
+                }
+                .checkmark:after { // Create checkmark - hidden by default
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+                .input-container input:checked ~ .checkmark:after { // Show checkmark when checked
+                    display: block;
+                }
+                .input-container .checkmark:after {
+                    left: 10px;
+                    top: 10px;
+                    width: 10px;
+                    height: 10px;
+                    background: #fff;
+                }
+            }
+        /*}*/
         .filter-tooltip {
             background: #d8d8d8;
             margin-left: 0px;
@@ -92,6 +148,9 @@
             font-size: smaller;
             position: relative;
             cursor: pointer;
+            .responsive(768px, {
+                margin-left: 15px;
+            });
             .filter-tooltip-text {
                 visibility: hidden;
                 width: 120px;

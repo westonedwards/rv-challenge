@@ -47,28 +47,32 @@
                         <span id="dealer-count"></span> dealers in <span id="dealer-zipcode"></span>
                     </div>
                     <div class="separator-bar"></div>
-                    <div class="filters">
+                    <!--<div class="filters"> -->
                         <div class="filter-results"><strong>Filter Results</strong></div>
-                        <label class="input-container">Service
-                            <input type="checkbox" checked="true" data-id="Service Pro">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="input-container">Installation
-                            <input type="checkbox" checked="true" data-id="Installation Pro">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="input-container">Residential
-                            <input type="checkbox" checked="true" data-id="Residential Pro">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="input-container">Commercial
-                            <input type="checkbox" checked="true" data-id="Commercial Pro">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                    <div class="filter-tooltip">?
-                        <span class="filter-tooltip-text">Select an option to display results</span>
-                    </div>
+                        <span class="filter-results-arrow">&#x25BC;</span>
+                        <div class="input-items">
+                            <label class="input-container">Service
+                                <input type="checkbox" checked="true" data-id="Service Pro">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="input-container">Installation
+                                <input type="checkbox" checked="true" data-id="Installation Pro">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="input-container">Residential
+                                <input type="checkbox" checked="true" data-id="Residential Pro">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="input-container">Commercial
+                                <input type="checkbox" checked="true" data-id="Commercial Pro">
+                                <span class="checkmark"></span>
+                                <span class="filter-tooltip"><span>?</span>
+                                    <span class="filter-tooltip-text">Select an option to display results</span>
+                                </span>
+                            </label>
+                            
+                        </div>
+                    <!--</div>-->
                 </div>
             </div>
             <!-- Filter end -->
@@ -116,6 +120,7 @@
         </footer>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="./public/scripts/navigation.js"></script>
+        <script type="module" src="./public/scripts/mobileFilter.js"></script>
         <script type="module" src="./public/scripts/dealerData.js"></script>
         <script src="./public/scripts/modal.js"></script>
     </body>

@@ -3,7 +3,8 @@ $(document).ready(() => {
         dealerCount = $('#dealer-count'),
         zipCode = $('#dealer-zipcode'),
         filteredData = $('#filtered-data'),
-        checkboxes = $('.filters').find('input:checkbox');
+        //checkboxes = $('.filters').find('input:checkbox');
+        checkboxes = $('.filter').find('input:checkbox');
     let filterArr = ['Residential Pro', 'Commercial Pro', 'Service Pro', 'Installation Pro'];
     
     // Check for changes to checkboxes and add/remove from filter
