@@ -1,0 +1,246 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+* {
+  font-family: 'OpenSans', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'OpenSans', sans-serif;
+}
+div {
+  font-family: 'OpenSans', sans-serif;
+}
+a {
+  font-family: 'OpenSans', sans-serif;
+  text-decoration: none;
+  color: inherit;
+}
+main {
+  background: #ffffff url('../images/water-image.png') no-repeat top center;
+  padding: 150px 0px 50px 0px;
+}
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.row-flex {
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .row-flex {
+    flex-direction: column;
+  }
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 4;
+  padding-top: 35px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal .modal-content {
+  background-color: #ffffff;
+  margin: auto;
+  width: 45%;
+  position: relative;
+  margin-bottom: 55px;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .modal .modal-content {
+    width: 90%;
+  }
+}
+.modal .modal-content .close {
+  position: absolute;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  top: 10px;
+  right: 25px;
+}
+.modal .modal-content .close:hover,
+.modal .modal-content .close:focus {
+  color: #216ddf;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal .modal-content .modal-blue-header {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+  background: #083d8c;
+  color: #ffffff;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .modal .modal-content .modal-blue-header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.modal .modal-content .modal-blue-header h3 {
+  font-weight: bold;
+  font-family: 'OpenSans', sans-serif;
+}
+.modal .modal-content .modal-blue-header h1 {
+  font-size: 32px;
+  font-family: 'OpenSans', sans-serif;
+}
+.modal .modal-content .modal-contact-form {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .modal .modal-content .modal-contact-form {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.modal .modal-content .modal-contact-form p {
+  margin-bottom: 20px;
+  font-size: smaller;
+}
+.modal .modal-content .modal-contact-form form {
+  background: #f6f6f6;
+  padding: 15px;
+}
+.modal .modal-content .modal-contact-form form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #616161;
+  font-size: smaller;
+  font-weight: bold;
+  font-family: 'OpenSans', sans-serif;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.modal .modal-content .modal-contact-form form label span {
+  display: block;
+  position: absolute;
+  background: url('../images/circle-form.png') no-repeat center center;
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  top: 10px;
+  right: 5px;
+}
+.modal .modal-content .modal-contact-form form input {
+  width: calc(95%);
+  padding: 10px;
+  border: 1px solid #d8d8d8;
+  margin-bottom: 10px;
+}
+.modal .modal-content .modal-contact-form form input .phone {
+  width: 50%;
+}
+.modal .modal-content .modal-contact-form form textarea {
+  height: 50px;
+  resize: none;
+  width: calc(95%);
+  padding: 10px;
+  border: 1px solid #d8d8d8;
+  margin-bottom: 10px;
+}
+.modal .modal-content .modal-contact-form form .form-button {
+  border: 1px solid #3f3f3f;
+  color: #3f3f3f;
+  background: inherit;
+  padding: 5px 10px 5px 10px;
+  display: inline;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+.modal .modal-content .modal-contact-form form .form-button-active {
+  background: #01c7c6;
+  color: #ffffff;
+}
+.modal .modal-content .modal-contact-form form .contact-form-separator {
+  width: 100%;
+  height: 2px;
+  display: block;
+  background: #ececec;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.modal .modal-content .modal-contact-form form .form-submit-button {
+  border: 0px;
+  background: inherit;
+  position: relative;
+  font-weight: bold;
+  font-size: larger;
+  padding: 10px 30px 10px 10px;
+  cursor: pointer;
+  color: #3f3f3f;
+  display: block;
+  margin: 0 auto;
+}
+.modal .modal-content .modal-contact-form form .form-submit-button span {
+  position: absolute;
+  background: url('../images/next-arrow.png') no-repeat center center;
+  background-size: contain;
+  display: block;
+  height: 15px;
+  width: 15px;
+  right: 5px;
+  top: 17px;
+}
+.modal .modal-content .modal-footer {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #f6f6f6;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .modal .modal-content .modal-footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.modal .modal-content .modal-footer p {
+  font-size: smaller;
+  font-family: 'OpenSans', sans-serif;
+  color: #3f3f3f;
+}
+.modal-show {
+  display: block;
+}
