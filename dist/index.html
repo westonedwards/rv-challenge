@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="./public/styles/reset.css">
+        <link type="text/css" rel="stylesheet" href="./public/styles/default.css">
+        <link type="text/css" rel="stylesheet" href="./public/styles/header.css">
+        <link type="text/css" rel="stylesheet" href="./public/styles/filter.css">
+        <link type="text/css" rel="stylesheet" href="./public/styles/dealer.css">
+        <link type="text/css" rel="stylesheet" href="./public/styles/modal.css">
+        <link type="text/css" rel="stylesheet" href="./public/styles/footer.css">
+        <title>Red Ventures Challenge - Created by Weston Edwards</title>
+    </head>
+    <body>
+        <!-- Heading -->
+        <header>
+            <div class="blue-header">
+                <div><a href="#">Dealers and Distributors</a></div>
+                <div class="commercial-service">
+                    <div><a href="#">Commercial Service</a></div>
+                    <div><img src="./public/images/action-commercial-icon.png" alt="Commercial Service Action"></div>
+                </div>
+            </div>
+            <nav>
+                <div>
+                    <img src="./public/images/pool-pros-logo.png" alt="Pool Pros Logo">
+                </div>
+                <div class="mobile-menu-image"></div>
+                <div id="nav-items" class="nav-items">
+                    <ul>
+                        <li><a href="#">Pools & Spas</a><span></span></li>
+                        <li><a href="#">Supplies</a><span></span></li>
+                        <li><a href="#">Resources</a><span></span></li>
+                        <li><a href="#">Services</a><span></span></li>
+                    </ul>
+                </div>
+                <div><button><span class="location-icon"></span>Find a <span class="pool-span">Pool</span> Pro</button></div>
+            </nav>
+        </header>
+        <!-- Content -->
+        <main class="container">
+            <!-- Filter -->
+            <div class="filter-container">
+                <div class="filter">
+                    <div class="dealer-count">
+                        <span id="dealer-count"></span> dealers in <span id="dealer-zipcode"></span>
+                    </div>
+                    <div class="separator-bar"></div>
+                    <div class="filter-results"><strong>Filter Results</strong></div>
+                    <span class="filter-results-arrow">&#x25BC;</span>
+                    <div class="input-items">
+                        <label class="input-container">Service
+                            <input type="checkbox" checked data-id="Service Pro">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="input-container">Installation
+                            <input type="checkbox" checked data-id="Installation Pro">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="input-container">Residential
+                            <input type="checkbox" checked data-id="Residential Pro">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="input-container">Commercial
+                            <input type="checkbox" checked data-id="Commercial Pro">
+                            <span class="checkmark"></span>
+                            <span class="filter-tooltip"><span>?</span>
+                                <span class="filter-tooltip-text">Select an option to display results</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- Filter end -->
+            <!-- Dealer data -->
+            <div id="filtered-data"></div>
+            <!-- Dealer data end -->
+        </main>
+        <!-- Footer -->
+        <footer>
+            <div class="social-connect">
+                <div class="footer-logo">
+                    <img src="./public/images/pool-pros-logo-footer.png" alt="Pool Pros Logo">
+                </div>
+                <div class="social">
+                    <div>
+                        <h3>CONNECT WITH US</h3>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="#"><img src="./public/images/twitter-icon.png" alt="Twitter"></a></li>
+                            <li><a href="#"><img src="./public/images/facebook-icon.png" alt="Facebook"></a></li>
+                            <li><a href="#"><img src="./public/images/youtube-icon.png" alt="YouTube"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-terms">
+                <div class="d-d-mobile">
+                    <div><a href="#">Dealers and Distributors</a></div>
+                    <div>|</div>
+                    <div class="commercial-service">
+                        <div><a href="#">Commercial Service</a></div>
+                        <div><img src="./public/images/action-commercial-icon.png" alt="Commercial Service Action"></div>
+                    </div>
+                    <div class="d-d-mobile-separator"></div>
+                </div>
+                <div class="copyright-terms">
+                    <div>&copy; 2017 Pool Pros</div>
+                    <div>|</div>
+                    <div><a href="#">Privacy Policy</a></div>
+                    <div>|</div>
+                    <div><a href="#">Terms and Conditions</a></div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="./public/scripts/bundle.min.js"></script>
+    </body>
+</html>
